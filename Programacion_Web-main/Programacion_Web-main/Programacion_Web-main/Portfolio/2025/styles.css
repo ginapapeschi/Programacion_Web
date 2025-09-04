@@ -1,0 +1,81 @@
+@font-face {
+  font-family: 'AMORIA'; 
+  src: url('fuentes/AMORIA.otf') format('truetype'); /* Ruta relativa */
+  font-weight: normal;
+  font-style: normal;
+}
+
+html {
+  scroll-padding-top: 90px;
+}
+
+.inicio_div {
+    text-align: center;
+    color: #C74E38;
+}
+
+body {
+    margin-top: 100px;
+    text-align: center;
+    color: #D16D5C;
+    background-color: #EFCDC7;
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+a {
+    color:#ffffff;
+    font-size: 20px;
+    text-decoration: none
+}
+
+nav ul{
+    position: flex;
+    list-style: none;
+    padding: 25px;
+    margin: 0;
+    display: flex;
+    justify-content: center; 
+    gap: 45px;
+    font-size: 20px;
+    font-family: 'AMORIA';
+    transition: color 0.3s;
+    z-index: 1000;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #bc867c;
+  z-index: 1000;
+  padding: 1px 0;
+}
+
+
+nav a:hover {
+    color: rgb(255, 208, 208);
+    transition: color 0.5s;
+}
+
+h1 {
+    color: #963B2A;
+    font-family: 'AMORIA';
+}
+
+h2 {
+    color: #963B2A;
+    font-family: 'AMORIA';
+}
+
+h3 {
+    text-align: center;
+    color:#963B2A;
+    font-family: 'AMORIA';
+}
+
+a:hover {
+    color:#963B2A;
+    transition: color 0.5s;
+}
