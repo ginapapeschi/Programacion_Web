@@ -14,21 +14,19 @@ html::-webkit-scrollbar { /* Pseudoelemento de WebKit (navegadores) */
   width: 0px; /* Oculta la barra de desplazamiento, no deja espacio para que se dibuje */
   background: transparent; /* Define que el fondo del área donde estaría la barra (el “track” invisible del scrollbar) sea transparente. */
 }
-/* Elimina la barra de desplazamiento visual (sin impedir el scroll) */
 
 /* PRIMER CARTEL */
 
 .inicio_div {
   text-align: center;
   color: #c32f79;
-  padding: 25px; /* Tamaño del recuadro de la presentación*/
-  border: 7px double #cd5788; /* Borde del recuadro. "double" es el estilo de borde */
-  border-radius: 10px; /* Redondea las esquinas del borde*/
+  padding: 25px;
+  border: 7px double #cd5788;
+  border-radius: 10px;
   background-color: rgba(205,87,136,0.1);
-  display: inline-block; /* Se coloca el cuadro en la misma línea que otros elementos, permite definir ancho, alto, márgenes, etc., como un bloque. Perfecto para botones/tarjetas */
+  display: inline-block; 
   margin-bottom: 30px;
-  transition: background-color 2s, transform 0.6s; /* Hace que los cambios de estilo se animen suavemente. transition indica que se quiere animar cambios en ciertas propiedades CSS. all indica que TODAS las propiedades que cambien tendrán transición */
-  /* transform permite modificar la forma o posición de un elemento, entonces indica que si hay una propiedad transform, que transicione en 0.6s */
+  transition: background-color 2s, transform 0.6s;
 }
 
 .inicio_div:hover {
@@ -36,27 +34,27 @@ html::-webkit-scrollbar { /* Pseudoelemento de WebKit (navegadores) */
   transform: scale(1.02) translateY(10px);
 }
 
-/* FIN PRIMER CARTEL */
+/* BODY */
 
 body {
-  margin-top: 100px; /* Margen encima del primer cartel */
+  margin-top: 100px;
   text-align: center;
   color: #c32f79;
   background-color: #EFCDC7;
   font-size: 20px;
   font-family: 'Montserrat', sans-serif;
   transition: background-color 0.3s, color 0.3s; /* Cambio transicionado al volver al tema claro */
-  line-height: 1.6; /* Interlineado */
+  line-height: 1.6;
 }
 
 img.yo { 
-  width: 500px;
-  height: 500px; 
-  object-fit:cover; /* Mantiene proporción si el contenido no es cuadrado */
+  width: 300px;
+  height: 300px; 
+  object-fit: cover;
   box-shadow: 0px 2px 6px rgba(71, 18, 51, 0.516);
   transition: all 0.5s;
   border: 7px double #cd5788;
-  border-radius: 10px;
+  border-radius: 100%;
 }
 
 img.yo:hover {
@@ -71,7 +69,7 @@ body.tema-oscuro img.yo {
 a {
   color: #ffffff;
   font-size: 20px;
-  text-decoration: none; /* Para que no esté subrayado */
+  text-decoration: none;
   transition: text-shadow 0.45s;
 }
 
@@ -104,36 +102,32 @@ body.tema-oscuro .link_proyecto:hover {
 /* BARRA DE NAVEGACIÓN */
 
 nav ul {
-  list-style: none; /* Para que no tengan círculo de lista */
-  padding: 25px; /* Espacio interno del elemento, entre el contenido y el borde del elemento */
-  margin: 0; /* Espacio externo, fuera del borde del elemento, que separa la lista de otros elementos */
-  display: flex; /* Determina la posición de los elementos de la lista de manera flexible*/
+  list-style: none;
+  padding: 25px;
+  margin: 0;
+  display: flex;
   justify-content: center; 
   gap: 45px;
   font-size: 20px;
   font-family: 'AMORIA';
   transition: color 0.4s;
-  z-index: 1000; /* Controla el orden de apilamiento de los elementos en la página (qué elemento se muestra "encima" de otro cuando se superponen) */
+  z-index: 1000;
 }
 
-nav { /* Fija el menú en la parte superior y le da color, sombra y padding */
-  position: fixed; /* Hace que la barra de navegación se quede fija en la pantalla principal aunque se haga scroll */
+nav {
+  position: fixed;
   top: 0; /* Coloca el borde superior del nav en la parte superior de la ventana del navegador. Sólo funciona con position: fixed, absolute o relative */
   left: 0; /* Lo mismo pero con el borde izquierdo */
-  width: 100%; /* Extiende el nav a todo el ancho de pantalla, sin importar el tamaño de la ventana */
+  width: 100%;
   background-color: #d68d93;
-  z-index: 1000; /* Asegura que el nav aparezca por encima de cualquier otro elemento */
-  /*padding: 1px 0; /* Aplica espaciado interno dentro del nav, 1px padding arriba y abajo, 0 padding izquierda y derecha*/
+  z-index: 1000; 
   transition: background-color 0.4s, box-shadow 0.8s;
-  box-shadow: 0px 4px 10px rgba(104, 27, 75, 0.224); /* Crea una sombra debajo del nav: desplazamiento horizontal, desplazamiento vertical y desenfoque*/
+  box-shadow: 0px 4px 10px rgba(104, 27, 75, 0.224);
 }
 
 nav a:hover {
   text-shadow: 0 0 2px #ffffffc9, 0 0 2px #ffffff3f, 0 0 8px #ffffff; /* Iluminar links */
 }
-
-/* FIN BARRA DE NAVEGACIÓN */
-
 
 /* TÍTULOS */
 
@@ -144,18 +138,18 @@ h1, h2, h3 {
 }
 
 h1 {
-  border-bottom: 2px solid #cd5788; /* Añade un borde inferior que "subraya" cada título */
+  border-bottom: 2px solid #cd5788;
   display: inline-block;
-  padding-bottom: 5px; /* Separación del borde inferior respecto al heading 1 */
+  padding-bottom: 5px;
   margin-bottom: 15px;
 }
 
 h2 {
-  border-bottom: 2px solid #cd5788; /* Añade un borde superior que "subraya" cada título */
-  border-top: 2px solid #cd5788; /* Añade un borde inferior que "subraya" cada título */
+  border-bottom: 2px solid #cd5788;
+  border-top: 2px solid #cd5788;
   display: inline-block;
-  padding-top: 10px; /* Separación del borde superior respecto al heading 2 */
-  padding-bottom: 10px; /* Separación del borde inferior respecto al heading 2 */
+  padding-top: 10px;
+  padding-bottom: 10px;
   margin-bottom: 15px;
 }
 
@@ -188,7 +182,7 @@ p, blockquote, li { /* Cuando transiciona al tema claro */
   transition: color 0.3s, transform 0.2s;
 }
 
-p.resaltado, blockquote.resaltado { /* Hace que ciertos párrafos o citas se vean como cuadros destacados */
+p.resaltado, blockquote.resaltado { 
   border: 2px solid #cd5788;
   border-radius: 12px;
   padding: 12px 15px;
@@ -200,12 +194,11 @@ p.resaltado, blockquote.resaltado { /* Hace que ciertos párrafos o citas se vea
 
 p.resaltado:hover, blockquote.resaltado:hover {
   transform: scale(1.02);
-  background-color: rgba(205,87,136,0.12);
 }
 
 /* FORMULARIO */
 
-#formulario-contacto { /* Diseño del recuadro */
+#formulario-contacto { 
   margin-top: 30px;
   margin-bottom: 30px;
   padding: 25px;
@@ -219,7 +212,7 @@ p.resaltado:hover, blockquote.resaltado:hover {
 }
 
 #formulario-contacto:hover {
-  transform: translateY(-5px); /* Eleva el recadro del formulario */
+  transform: translateY(-5px); 
 }
 
 #formulario-contacto h1 { /* Aplica estilo a "Contactame" */
@@ -236,7 +229,7 @@ p.resaltado:hover, blockquote.resaltado:hover {
   color:#ffe0ec;
 }
 
-#formulario-contacto input, #formulario-contacto textarea { /* Estilo a las barras de input */
+#formulario-contacto input, #formulario-contacto textarea {
   text-align: center;
   width: 90%;
   padding: 12px;
@@ -247,7 +240,7 @@ p.resaltado:hover, blockquote.resaltado:hover {
   font-size: 20px;
   font-family: 'Montserrat', sans-serif;
   background-color: #fff;
-  color: #000; /* Color del texto del input */
+  color: #000; 
   transition: background-color 0.3s, color 0.3s, border-color 0.3s, box-shadow 0.3s, transform 0.2s;
   resize: none; /* Para que no se pueda redimensionar el textarea */
   field-sizing: content;
@@ -260,10 +253,8 @@ p.resaltado:hover, blockquote.resaltado:hover {
   margin-bottom: 10px;
 }
 
-#formulario-contacto input:focus, #formulario-contacto textarea:focus { /* Se activa cuando se recibe el foco del teclado o del mouse */
-/* El hover se activa cuando el cursor pasa por encima, no cuando interactúa directamente */
-/* textarea es exclusivo del mensaje que se quiere enviar */
-  outline: none; /* Para que no se active la línea predeterminada que le da los navegadores al hacer click */
+#formulario-contacto input:focus, #formulario-contacto textarea:focus {
+  outline: none;
   border-color: #cd5788;
   box-shadow: 0 0 8px rgba(205,87,136,0.5);
   transform: scale(1.02);
@@ -288,7 +279,7 @@ p.resaltado:hover, blockquote.resaltado:hover {
   box-shadow: 0 0 8px rgba(205,87,136,0.5);
 }
 
-/* ================= Links redes sociales ================= */
+/* REDES SOCIALES */
 #contacto a {
   color: #c32f79;
   font-size: 22px;
@@ -302,17 +293,17 @@ p.resaltado:hover, blockquote.resaltado:hover {
   text-shadow: 0 0 2px #f67db0, 0 0 2px #ffffff3f, 0 0 8px #f67db0;
 }
 
-/* ================= Botón Volver Arriba ================= */
-#botonArriba { /* Aparece al hacer scroll para volver al principio */
+/* BOTÓN PARA IR ARRIBA */
+#botonArriba { 
   position: fixed;
-  display: flex;
-  bottom: 20px; /* Determinan posición */
+  display:block;
+  bottom: 20px;
   right: 30px;
-  width: 50px; /* Determinan la forma circular */
+  width: 50px; 
   height: 50px;
   font-size: 22px;
   border: none;
-  border-radius: 50%; /* Indica qué tan redondo es en los bordes */
+  border-radius: 50%; 
   background-color: #cd5788;
   color: #fff;
   cursor: pointer;
@@ -332,16 +323,21 @@ p.resaltado:hover, blockquote.resaltado:hover {
 
 #botonArriba:hover {
   transform: scale(1.1);
-  box-shadow: 0 0 8px rgba(205,87,136,0.5); /* Iluminación */
+  box-shadow: 0 0 8px rgba(205,87,136,0.5);
 }
 
-body.tema-oscuro #botonArriba { /* Cuando está en modo oscuro */
+body.tema-oscuro #botonArriba {
   background-color: #f0a1c2;
   color: #1e1e1e;
 }
 
-/* ================= Tema oscuro ================= */
+/* FOOTER */
+footer p{
+  font-size: 17px;
+  margin-left: 0px;
+}
 
+/* TEMA OSCURO (GENERALES) */
 body.tema-oscuro #contacto a {
   color: #f0a1c2;
 }
@@ -377,7 +373,7 @@ body.tema-oscuro p.resaltado, blockquote.resaltado {
   text-shadow: 0 0 2px #f0a1c2, 0 0 1.6px #ffffff3f, 0 0 2px #f0a1c2;
 }
 
-body.tema-oscuro p.resaltado:hover, blockquote.resaltado:hover {
+body.tema-oscuro p.resaltado:hover, body.tema-oscuro blockquote.resaltado:hover {
   box-shadow: 0 0 8px rgba(205,87,136,0.5);
   background-color: #ae2b624b;
   ;
@@ -390,6 +386,10 @@ body.tema-oscuro #formulario-contacto {
 
 body.tema-oscuro #formulario-contacto h1 {
   color: #f0a1c2;
+}
+
+body.tema-oscuro #formulario-contacto label {
+  text-shadow: 0 0 2px #ffffff, 0 0 1.6px #ffffff3f, 0 0 2px #ffffff;
 }
 
 body.tema-oscuro #formulario-contacto input, body.tema-oscuro #formulario-contacto textarea {
@@ -413,8 +413,8 @@ body.tema-oscuro #formulario-contacto button:hover {
   box-shadow: 0 0 8px rgba(255, 250, 252, 0.5);
 }
 
-/* ================= Botón de alternar tema ================= */
-#botonTema { /* Crea el botón circular flotante que permite cambiar entre tema claro y oscuro */
+/* BOTÓN TEMA CLARO-OSCURO */
+#botonTema { 
   position: fixed;
   bottom: 20px;
   left: 20px;
@@ -445,8 +445,6 @@ body.tema-oscuro #botonTema {
 }
 
 /* APP DEL CLIMA */
-
-/* ================= CLIMA ================= */
 #clima {
   text-align: center;
   margin: 50px auto;
@@ -515,7 +513,7 @@ body.tema-oscuro #botonTema {
   margin-top: 10px;
 }
 
-/* ================= Tema oscuro ================= */
+/* TEMA OSCURO DEL CLIMA */
 body.tema-oscuro #clima {
   background-color: rgba(205, 87, 136, 0.1);;
   box-shadow: 0px 4px 10px rgba(8, 8, 8, 0.281);
@@ -529,12 +527,12 @@ body.tema-oscuro #clima input {
 }
 
 body.tema-oscuro #clima input::selection {
-  background: #666; /* Fondo del texto seleccionado */
-  color: #fff;      /* Color del texto seleccionado */
+  background: #666;
+  color: #fff;
 }
 
 body.tema-oscuro #clima input:focus {
-  background-color: #444; /* Forzamos que no cambie */
+  background-color: #444;
   border-color: #cd5788;
   box-shadow: 0 0 8px rgba(255, 141, 188, 0.769);
 }
@@ -551,3 +549,124 @@ body.tema-oscuro #clima button:hover {
 body.tema-oscuro #resultadoClima {
   color: #f0a1c2;
 }
+
+body.tema-oscuro #resultadoClima p {
+  text-shadow: 0 0 1px #f0a1c2, 0 0 1.6px #ffffff3f, 0 0 1px #f0a1c2;
+}
+
+@media (max-width: 700px) {
+  body {
+    font-size: 16px;
+    
+  }
+
+  #sobre-mi {
+    margin-left: 45px;
+  }
+
+  #sobre-mi h2 {
+    margin-left: 20px;
+  }
+
+  p.resaltado {
+    margin-left: 20px;
+  }
+  main {
+    margin-left: 0px;
+    margin-right: -13px;
+  }
+
+  a {
+    font-size: 12px;
+  }
+
+  img.yo {
+    width: 90%;
+    height: auto;
+    margin-left: 19px;
+  }
+
+  #proyectos {
+    margin-left: 45px;
+  }
+
+  article {
+    margin-left: 20px;
+  }
+
+  h2 {
+    margin-left: 20px;
+  }
+
+  #referencias {
+    margin-left: 45px;
+  }
+
+  #referencias h2 {
+    margin-left: 20px;
+  }
+
+  blockquote.resaltado {
+    margin-left: 20px;
+  }
+
+  #formulario-contacto {
+    width: 90%;
+    padding: 15px;
+    margin-left: 31px;
+  }
+
+  aside {
+    margin-left: 75px;
+    text-align: justify;
+  }
+
+  #contacto a {
+    font-size: 17px;
+  }
+  nav ul {
+    display: flex;
+    gap: 10px;
+    font-size: 1px;
+  }
+
+  .inicio_div {
+    width: 100%;
+    display: flex;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
+  #clima {
+    margin-left: 26px;
+  }
+
+  #clima h2 {
+    margin-left: 20px;
+  }
+
+  p, li {
+    font-size: 16px;
+  }
+
+  #botonTema {
+    width: 45px;
+    height: 45px;
+    font-size: 20px;
+  }
+
+  #botonArriba {
+    width: 45px;
+    height: 45px;
+    margin-left: 200px;
+  }
+  
+  footer {
+    margin-left: 80px;
+  }
+
+  #footer-text {
+    font-size: 14px;
+  }
+}
+

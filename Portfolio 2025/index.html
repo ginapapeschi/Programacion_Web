@@ -1,19 +1,19 @@
-<!doctype html> <!-- Declara HTML5, ayuda al navegador a renderizar en modo estándar -->
-<html lang="es"> <!-- Indica que el contenido está en español -->
-<head> <!-- Enlace a la cabeza, contiene METADATOS, enlaces a estilos, título y scripts que afectan a toda la página -->
-  <meta charset="utf-8"> <!-- Soporta acentos -->
-  <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Responsive -->
+<!doctype html>
+<html lang="es">
+<head> 
+  <meta charset="utf-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsive -->
   <title>Portfolio - Gina Papeschi</title>
   <link rel="stylesheet" href="styles.css">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 </head>
-<body> <!-- Todo lo que ve el usuario va dentro del body -->
-<!-- HEADER: barra de navegación -->
+<body> 
+
 <header>
-  <nav> <!-- Indica a lectores de pantalla y buscadores dónde están los enlaces principales -->
+  <nav>
     <ul>
-      <li><a href="index.html">Inicio</a></li> <!-- Elemento de la lista con enlace a la página principal  (enlace relativo) -->
-      <li><a href="#sobre-mi">Sobre mi</a></li> <!-- Enlace ancla que apunta a la sección id="sobre-mi" dentro de la misma página -->
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="#sobre-mi">Sobre mi</a></li>
       <li><a href="#proyectos">Proyectos</a></li>
       <li><a href="#referencias">Referencias</a></li>
       <li><a href="#formulario-contacto">Contacto</a></li>
@@ -21,10 +21,9 @@
   </nav>
 </header>
 
-<main> <!-- Elemento semántico que contiene el contenido principal de la página. Sólo uno por documento -->
-  <!-- Sección inicio -->
-   <div class="inicio_div"> <!-- Div con clase usada para estilo visual del bloque de intro -->
-  <section id="inicio"> <!-- Sección con id inicio para anclas y accesibilidad -->
+<main>
+   <div class="inicio_div">
+  <section id="inicio">
     <h1>Gina Papeschi</h1>
     <p>Estudiante de Ciencias de la Computación<br>Desarrolladora en formación</p>
   </section>
@@ -82,14 +81,14 @@
   <section id="formulario-contacto">
     <h1>Contactame</h1>
     <form action="mailto:ginapapeschi@gmail.com" method="post" enctype="text/plain"> <!-- Formulario HTML que usa mailto: para enviar por cliente de correo local -->
-      <label for="nombre">Nombre:</label><br> <!-- Label accesible vinculado a input por for="nombre"-->
-      <input type="text" maxlength="50" id="nombre" name="nombre" required> <!-- Campo de texto obligatorio (required) name es lo que se enviaría en el formulario -->
+      <label for="nombre">Nombre:</label><br>
+      <input type="text" maxlength="50" id="nombre" name="nombre" required>
 
       <label for="email">Correo electrónico:</label><br>
       <input type="email" maxlength="50" id="email" name="email" required> <!-- El campo type="email" valida el formato básico de correo -->
 
       <label for="mensaje">Mensaje:</label><br>
-      <textarea maxlength="1000" id="mensaje" name="mensaje" rows="5" required></textarea> <!-- Label para textarea obligatorio con 5 filas visibles -->
+      <textarea maxlength="1000" id="mensaje" name="mensaje" rows="5" required></textarea>
 
       <button type="submit">Enviar</button>
       <button type="reset">Limpiar</button>
@@ -101,8 +100,8 @@
     <section id="contacto">
     <br>
     <h2>Redes sociales</h2>
-    <p>Correo:<a href="mailto:ginapapeschi@gmail.com">ginapapeschi@gmail.com</a></p> <!-- Enlace mailto: que abre el cliente de correo -->
-    <p>Github:<a href="https://github.com/ginapapeschi" target="_blank" rel="noopener noreferrer">ginapapeschi</a></p> <!-- target="__blank" abre la página en una nueva pestaña o ventana -->
+    <p>Correo:<a href="mailto:ginapapeschi@gmail.com">ginapapeschi@gmail.com</a></p>
+    <p>Github:<a href="https://github.com/ginapapeschi" target="_blank" rel="noopener noreferrer">ginapapeschi</a></p>
     <p>Instagram:<a href="https://instagram.com/ginapapeschi" target="_blank" rel="noopener noreferrer">@ginapapeschi</a></p>
     <p>Teléfono: <a href="tel:+5492645482049">2645482049</a></p>
     </section>
@@ -110,7 +109,7 @@
 
     <!-- Clima -->
   <section id="clima">
-    <h2>Clima actual</h2>
+    <h1>Clima actual</h1>
     <br>
     <form id="formClima">
       <input type="text" id="ciudad" placeholder="Ingresa una ciudad" required>
@@ -124,6 +123,7 @@
 
 <!-- Footer -->
 <footer>
+  <p>© Gina Papeschi — Portfolio personal</p>
   <p id="footer-text"></p> <!-- Párrafo vacío que se rellena dinámicamente por JS con la fecha -->
 </footer>
 
@@ -133,7 +133,7 @@
   <!-- Botón alternar tema -->
   <button id="botonTema" title="Alternar tema">🌙</button>
   
-  <script src="script.js"></script> <!-- Carga el archivo JavaScript. Está colocado al final del body para que el DOM ya exista cuando se ejecute (por buena práctica) -->
+  <script src="script.js"></script>
 
 </body>
 </html>
